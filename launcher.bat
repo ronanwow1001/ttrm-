@@ -18,13 +18,13 @@ set /P INPUT=Selection:
 
 if %INPUT%==1 (
 )set PLAYCOOKIE=lw2.ez-webz.com:7198
-set TTS_GAMESERVER=127.0.0.1
+set TTSM_GAMESERVER=127.0.0.1
 ) else if %INPUT%==2 (
-    set TTS_GAMESERVER=167.114.220.172
+    set TTSM_GAMESERVER=167.114.220.172
 ) else if %INPUT%==4 (
-    set TTS_GAMESERVER=127.0.0.1
+    set TTSM_GAMESERVER=127.0.0.1
 ) else if %INPUT%==5 (
-    SET TTS_GAMESERVER=lw2.ez-webz.com:7198
+    SET TTSM_GAMESERVER=lw2.ez-webz.com:7198
 ) else if %INPUT%==3 (
     echo.
     set /P TTS_GAMESERVER=Gameserver: 
@@ -35,30 +35,30 @@ set TTS_GAMESERVER=127.0.0.1
 echo.
 
 if %INPUT%==2 (
-    set /P ttsUsername="Username: "
-    set /P ttsPassword="Password: "
+    set /P ttsmUsername="Username: "
+    set /P ttsmPassword="Password: "
 ) else if %INPUT%==4 (
-    set /P ttsUsername="Username: "
-    set /P ttsPassword="Password: "
+    set /P ttsmUsername="Username: "
+    set /P ttsmPassword="Password: "
 ) else (
-    set /P TTS_PLAYCOOKIE=Username: 
+    set /P TTSM_PLAYCOOKIE=Username: 
 )
 
 echo.
 
 echo ===============================
-echo Starting Toontown Stride...
+echo Starting Toontown Server Mod...
 echo ppython: "C:\Panda3D-1.10.0\python\ppython.exe"
 
 if %INPUT%==2 (
-    echo Username: %ttsUsername%
+    echo Username: %ttsmUsername%
 ) else if %INPUT%==4 (
-    echo Username: %ttsUsername%
+    echo Username: %ttsmUsername%
 ) else (
-    echo Username: %TTS_PLAYCOOKIE%
+    echo Username: %TTSM_PLAYCOOKIE%
 )
 
-echo Gameserver: %TTS_GAMESERVER%
+echo Gameserver: %TTSM_GAMESERVER%
 echo ===============================
 
 cd ../../
